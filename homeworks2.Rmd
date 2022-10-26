@@ -1,0 +1,31 @@
+---
+title: "Homeworks2"
+
+output: pdf_document
+---
+Due: 9th November
+
+## Simple exercises (1 point each)
+
+1. Build a deck of poker cards as a data frame.
+
+2. Write a function that shuffles the deck, and then deals 2 cards.
+
+## More complex exercises (2 points each)
+### In all of these exercises, deck means the deck of poker cards
+
+
+1. Write a function that deals cards from a deck (with replacement) and stops when one card comes up for the second time. The output should be the card (suit and number) and the number of iterations needed for the termination, as a full sentence.
+
+2. Write a function that deals 2 cards from a deck (with replacement) and stops when both have the same color. The output should be the 2 cards (suit and number) and the number of iterations needed for the termination, as a full sentence.
+
+3. Write a function that simulates a game played by 3 players (Ann, Bella and Cecilia), they get 2 cards each until one of them has cards with the same color (she wins). The output should be the name of the winner, the 2 cards (suit and number) and the number of iterations needed for the termination, as a full sentence.
+
+4. Modify one of the function above (Ex. 3) so that the output is not a sentence, but a list, where the first element is the name of the winner, the second one is the winner cards, the third is all the cards dealt before, the fourth is number of iterations needed for the termination the fifth is the sentence which was the output of Ex. 3.
+
+5. Write a function that deals #n# cards (should be an input), and counts how many Aces are dealt.
+
+6. Write a function that deals #n# cards (should be an input), and selects the one(s) with the greatest value.
+
+
+7. (4 points) Write a function that deals 5 cards each to 2 players, and evaluates who's got the better hand considering poker rules (https://www.cardplayer.com/rules-of-poker/hand-rankings).
