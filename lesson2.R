@@ -20,7 +20,7 @@ length(die)
 text <- c('apple','orange')
 is.vector(text)
 
-typeof(text)
+
 
 sum(die)
 sum(text)
@@ -175,19 +175,25 @@ colnames(df)
 colnames(df) <- c('l','m','h')
 
 tictactoe <- function(){
-  board <- matrix("",3,3)
+  board <- matrix("",3,3) #3x3 matrix all ""
   i <- 0 #number of filled cells
-  while (i<9) {
-    if(i%%2){marker <- "o"}else{marker <- "x"}
+  gameover <- F 
+  while (i<9 & !gameover) {
+    if(i%%2){marker <- "o"}else{marker <- "x"} #changes marker 
     if(i<8){board[sample(which(board == ""),1)] <- marker}else{board[which(board == "")] <- marker}
-    i <- i+1
+    rows <- any(rowSums(board==marker)==3)
+    cols <- any(colSums(board==marker)==3)
+    diags <- all(diag(board==marker)) | all((board==marker)[c(3,5,7)])
+    gameover <- any(rows,cols,diags)
+    if(!gameover) i <- i+1
   }
+  if(i<9){print(paste(marker,"won in ",i+1))}else {print("tie")}
   board
 }
 
-tictactoe()
-
-
+res <- tictactoe()
+res==marker
+board <- res
 
 
 ## hints for hw: rowSums, colSums, 
