@@ -189,6 +189,12 @@ ggplot(data = mpg) +
 ggplot(data = mpg) + 
   geom_point(mapping = aes(x = displ, y = hwy, color = class))
 
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = cyl))
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = factor(cyl)))
+
 #example for size
 ggplot(data = mpg) + 
   geom_point(mapping = aes(x = displ, y = hwy, size = class))
@@ -401,3 +407,7 @@ ggplot(data = mpg, mapping = aes(x = class, y = hwy)) +
 #color palettes
 # http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/figure/unnamed-chunk-14-1.png
 # https://www.datanovia.com/en/blog/top-r-color-palettes-to-know-for-great-data-visualization/
+
+
+
+?economics
